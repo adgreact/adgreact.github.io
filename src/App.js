@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import Particles from './Particles';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{
+      position: 'relative',
+      width: '100%',
+      height: '100%',
+      overflow: 'hidden',
+      backgroundImage: 'radial-gradient(circle at top left, rgb(254, 254, 246), rgb(116, 115, 108)), radial-gradient(circle at bottom right, #4B4B4Bff, #181818ff)',
+    }}>
+      <Particles />
+      <h1 style={{
+        position: 'absolute',
+        top: '0',
+        zIndex: '1'
+      }}>React App</h1>
     </div>
   );
 }
